@@ -20,7 +20,7 @@ function App() {
     <Navbar/>
           <Routes>
             <Route exact path="/" element={<Login />} />
-            <Route exact path="/Register" element={<Register />} />
+            <Route exact path="/Register" element={<Register/>} />
             <Route exact path="/Dashboard" element={<Dashboard />} />
             {/* <PrivateRoute component={<Dashboard/>} exact path="/Dashboard" /> */}
           </Routes>
