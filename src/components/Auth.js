@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 
 
-export default function Login() {
+export default function Auth() {
     const initialState = {
         email: "",
         password: "",
@@ -23,8 +23,8 @@ export default function Login() {
         sessionStorage.setItem("auth",false)
     })
     return (
-        <div className='container col-4' style={{ backgroundColor: "#f8f9fa" }}>
-            <h3 className='text-center my-3 mx-2'>Login</h3>
+        <div className='container mt-5 col-4' style={{ backgroundColor: "#f8f9fa" }}>
+            <h3 className='text-center my-3 mx-2 pt-4'>Login</h3>
             <form className='my-3 mx-2'>
                 <div className="mb-3">
                     <label htmlFor="exampleInputEmail1" className="form-label">Email address</label>
@@ -36,7 +36,7 @@ export default function Login() {
                 </div>
                 <div className="mb-3 form-check">
                     <input type="checkbox" className="form-check-input" id="exampleCheck1" />
-                    <label className="form-check-label" >Check me out</label>
+                    <label className="form-check-label" >Check if admin</label>
                 </div>
                 <div className='text-center'>
                     <button className="btn btn-primary my-2 mx-2" disabled={user.email.length === 0 || user.password.length === 0}  onClick={handleLogins} >Login</button>

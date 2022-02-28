@@ -1,12 +1,12 @@
 
-import {Route, Navigate} from 'react-router-dom'
+import {Navigate, Outlet} from 'react-router-dom'
 const isLogin=()=>{
-    return sessionStorage.getItem("auth")
+  const value=sessionStorage.getItem("auth");
+   return value===null?  false: value
 }
-export default function PrivateRoute({component:Component,...rest}) {
-  return (
-    <Route {...rest} render={props => {
-        return (isLogin() === "true") ? <Component/> : <Navigate to="/" exact />;
-    }} />
-  )
+// export default function PrivateRoute() {
+  export default function PrivateRoute({component:Component,...rest}) {
+  return (isLogin() === "true") ? <Outlet/> : <Navigate to="/user/login" exact />;
+  
 }
+  
