@@ -13,7 +13,7 @@ export default function Homepage() {
           item[key].toString().toLowerCase().includes(filter.toString().toLowerCase()))
     });
   return (
-    <section className="container">
+    <section className="container mt-5">
       <div className="text-center my-3">
         <div className="search">
           <input className="searchbar"

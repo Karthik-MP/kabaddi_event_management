@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 export default function Events(props) {
     return (
-        <div className="col-md-3 mx-2 my-2">
+        <div className="col-md-3 mx-2 my-2 mb-5">
             <div className="card p-2 overflow-hidden h-100 shadow">
                 <img src={props.imageUrl} alt={props.stadiumName} className="card-img-top" />
                 <div className="card-body">

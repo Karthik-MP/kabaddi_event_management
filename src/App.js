@@ -1,17 +1,18 @@
 
 import './App.css';
-
-import Signup from './components/Signup';
-import Navbar from './components/Navbar';
-import Homepage from './components/Homepage';
-import Auth from './components/Auth';
-import PrivateRoute from './utils/PrivateRoute';
 import {
   BrowserRouter as Router,
   Routes,
   Route,
 
 } from "react-router-dom";
+
+import Signup from './components/Signup';
+import Navbar from './components/Navbar';
+import Homepage from './components/user/Homepage';
+import Auth from './components/Auth';
+import PrivateRoute from './utils/PrivateRoute';
+import ViewBooking from './components/user/ViewBooking';
 
 
 
@@ -23,11 +24,14 @@ function App() {
           <Routes>
             <Route exact path="/user/login" element={<Auth />} />
             <Route exact path="/user/signup" element={<Signup/>} />
+            
             <Route exact path="/user/homepage" element={<Homepage/>} />
-            {/* <Route exact path="/Register" element={<Register/>} /> */}
+            <Route exact path='/user/getSchedule' element={<ViewBooking/>}/>
+            
             
             <Route exact path='/' element={<PrivateRoute/>}>
-              <Route exact path='/' element={<Homepage/>}/>
+              {/* <Route exact path='/' element={<Homepage/>}/>
+              <Route exact path='/user/getSchedule' element={<Booking/>}/> */}
             </Route>
           </Routes>
     </Router>
