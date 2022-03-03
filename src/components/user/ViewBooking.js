@@ -54,7 +54,7 @@ export default function ViewBooking() {
     ]
 
     return (
-        <div className='container col-10 text-center'>
+        <div className='container col-8 text-center px-2' id='viewBookingBody' >
             <h2 className='my-5'>Booked Events</h2>
             <table className="table-secondary table table-striped table-hover">
                 <thead className='table-dark'>
@@ -77,16 +77,14 @@ export default function ViewBooking() {
                                 <td>{element.time}</td>
                                 <td>{element.date}</td>
                                 <td>{element.totalPrice}</td>
-                                <td><Link to={`user/editEvent/${element.id}`} style={{color:'black'}}><FaEdit/></Link></td>
-                                <td><Link to={`user/deleteEvent/${element.id}`} style={{color:'black'}}><FaTrash/></Link></td>
+                                <td><Link id='editBooking' to={`user/editEvent/${element.id}`} style={{color:'black'}}><FaEdit/></Link></td>
+                                <td><Link id='deleteBooking' to={`user/deleteEvent/${element.id}`} style={{color:'black'}}><FaTrash/></Link></td>
                             </tr>
                         </>
                     })}
                 </tbody>
             </table>
-            
             <button type="button" className="btn btn-dark" ><Link style={{ color: "white", textDecoration: "None" }} to="/user/homepage">Back to home</Link></button>
         </div>
-
     )
 }

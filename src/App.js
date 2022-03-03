@@ -1,5 +1,3 @@
-
-import './App.css';
 import {
   BrowserRouter as Router,
   Routes,
@@ -13,6 +11,7 @@ import Homepage from './components/user/Homepage';
 import Auth from './components/Auth';
 import PrivateRoute from './utils/PrivateRoute';
 import ViewBooking from './components/user/ViewBooking';
+import Bookingform from "./components/Bookingform";
 
 
 
@@ -27,7 +26,8 @@ function App() {
             
             <Route exact path="/user/homepage" element={<Homepage/>} />
             <Route exact path='/user/getSchedule' element={<ViewBooking/>}/>
-            
+            <Route exact path='/user/bookingform' element={<Bookingform/>}/>
+          
             
             <Route exact path='/' element={<PrivateRoute/>}>
               {/* <Route exact path='/' element={<Homepage/>}/>

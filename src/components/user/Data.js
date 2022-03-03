@@ -11,37 +11,37 @@ const data={
             id:1,
             image:image1,
             stadiumname:'Gandhi Stadium',
-            place:'Delhi'
+            venue:'Delhi'
         },
         {
             id:2,
             image:image2,
             stadiumname:'Nehru Stadium',
-            place:'Chennai'
+            venue:'Chennai'
         },
         {
             id:3,
             image:image3,
             stadiumname:'Gachibowli Stadium',
-            place:'Hyderabad'
+            venue:'Hyderabad'
         },
         {
             id:4,
             image:image4,
             stadiumname:'Netaji Indoor Stadium',
-            place:'Kolkata'
+            venue:'Kolkata'
         },
         {
             id:5,
             image:image5,
             stadiumname:'Kanteerava Stadium',
-            place:'Bangalore'
+            venue:'Bangalore'
         },
         {
             id:6,
             image:image6,
             stadiumname:'G.M.S Stadium',
-            place:'Hyderabad'
+            venue:'Hyderabad'
         }
     ]
 }

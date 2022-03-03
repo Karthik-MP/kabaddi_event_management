@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom'
 
 const isLogin = () => {
   const value = sessionStorage.getItem("auth");
-  // return value === null ? false : value
+  // console.log(value)
+  // return value ===  false? false : value
   return true
 }
 
@@ -21,18 +22,18 @@ export default function Navbar() {
               {isLogin() &&
                 <>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/user/bookEvent">Book Event</Link>
+                    <Link className="nav-link active" aria-current="page" to="/user/bookEvent" id='UserBookEvent'>Book Event</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/user/getSchedule">View Booked Events</Link>
+                    <Link className="nav-link active" aria-current="page" to="/user/getSchedule" id='UserViewBookEvent'>View Booked Events</Link>
                   </li>
                 </>}
             </ul>
             <div className="navbar-right">
               <ul className='navbar-nav me-auto mb-2 mb-lg-0'>
-                {isLogin() === 'false' ? <><li className="nav-item"><Link className='nav-link' to='/user/login'>Login</Link></li>
+                {isLogin() === false ? <><li className="nav-item"><Link className='nav-link' to='/user/login'>Login</Link></li>
                   <li className="nav-item"><Link className='nav-link' to='/user/signup'>Register</Link></li></>
-                  : <li className="nav-item"><Link className='nav-link' to='/user/login'>Logout</Link></li>
+                  : <li className="nav-item"><Link className='nav-link' to='/user/login' id='logout'>Logout</Link></li>
                 }
               </ul>
 
