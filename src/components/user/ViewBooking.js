@@ -52,7 +52,7 @@ export default function ViewBooking() {
             totalPrice:2500
         }
     ]
-
+  
     return (
         <div className='container col-8 text-center px-2' id='viewBookingBody' >
             <h2 className='my-5'>Booked Events</h2>
@@ -77,7 +77,8 @@ export default function ViewBooking() {
                                 <td>{element.time}</td>
                                 <td>{element.date}</td>
                                 <td>{element.totalPrice}</td>
-                                <td><Link id='editBooking' to={`user/editEvent/${element.id}`} style={{color:'black'}}><FaEdit/></Link></td>
+                               {/* <td><Link id='editBooking' to={`user/editEvent/${element.id}`}  style={{color:'black'}}><FaEdit/></Link></td> */}
+                               <td><Link id='editBooking' to={`/user/editEvent/${element.id}`}  style={{color:'black'}}><FaEdit/></Link></td>
                                 <td><Link id='deleteBooking' to={`user/deleteEvent/${element.id}`} style={{color:'black'}}><FaTrash/></Link></td>
                             </tr>
                         </>

@@ -24,10 +24,10 @@ export default function Auth() {
         
     },[])
     const isLogin = () => {
-        const value = sessionStorage.getItem("auth");
+        // const value = sessionStorage.getItem("auth");
         // console.log(value)
         // return value ===  false? false : value
-        return  
+        return  true;
       }
     return (
         <>

@@ -52,7 +52,7 @@ export default function Signup() {
         <div className="border rounded mx-3 my-3 px-3">
           <h4 className="mt-4 text-center mb-4">Register to Kabaddi Leguage Management</h4>
           <select className="form-select" id='admin/user' defaultValue={'DEFAULT'} onChange={handleAdminUser}>
-            <option value="" disabled hidden value="DEFAULT">Choose User...</option>
+            <option value="" disabled hidden value='DEFAULT'>Choose User...</option>
             <option value="Admin">Admin</option>
             <option value="User">User</option>
           </select>

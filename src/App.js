@@ -11,7 +11,12 @@ import Homepage from './components/user/Homepage';
 import Auth from './components/Auth';
 import PrivateRoute from './utils/PrivateRoute';
 import ViewBooking from './components/user/ViewBooking';
-import Bookingform from "./components/Bookingform";
+import Booking from "./components/user/Booking";
+import EditEvent from "./components/user/EditEvent";
+import Addvenue from "./components/admin/Addvenue";
+import Addteam from "./components/admin/Addteam";
+import Addreferee from "./components/admin/Addreferee";
+
 
 
 
@@ -23,10 +28,15 @@ function App() {
           <Routes>
             <Route exact path="/user/login" element={<Auth />} />
             <Route exact path="/user/signup" element={<Signup/>} />
-            
+  
             <Route exact path="/user/homepage" element={<Homepage/>} />
             <Route exact path='/user/getSchedule' element={<ViewBooking/>}/>
-            <Route exact path='/user/bookingform' element={<Bookingform/>}/>
+            <Route exact path='/user/bookEvent' element={<Booking/>}/>
+            <Route exact path='/user/editEvent/:id' element={<EditEvent/>}/>
+            
+            <Route exact path='/admin/addVenue/' element={<Addvenue/>}/>
+            <Route exact path='/admin/addTeam/' element={<Addteam/>}/>
+            <Route exact path='/admin/addReferee' element={<Addreferee/>}/>
           
             
             <Route exact path='/' element={<PrivateRoute/>}>
