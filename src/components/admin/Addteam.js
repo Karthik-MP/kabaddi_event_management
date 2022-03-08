@@ -4,31 +4,30 @@ export default function Addteam() {
   const [addTeam, setAddTeam] = useState({
     addTeamName: "",
     addTeamImageUrl: "",
-    address: "",
+    count: "",
     location: "",
   });
 
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-  // const handleInput = (e) => {
-  //   const name = e.target.name;
-  //   const value = e.target.value;
-  //   console.log(name, value);
-  //   setAddTeam({ ...addTeam, [name]: value });
-  // }
+  const handleInput = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+    console.log(name, value);
+    setAddTeam({ ...addTeam, [name]: value });
+  }
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const newData = { ...addTeam, id: new Date().getTime().toString() }
-    // console.log(data);
-    // setData([...data, newData]);
-    // console.log(data);
-    // setAddTeam({
-    //   addTeamName: "", addTeamImageUrl: "", address: "", location: "",
-    //   email: "", location: "", dte: "", time: "", noofmembers: ""
-    // });
+    const newData = { ...addTeam }
+    console.log(data);
+    setData([...data, newData]);
+    console.log(data);
+    setAddTeam({
+      addTeamName: "", addTeamImageUrl: "", location: "", count: ""
+    });
   }
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(1);
   const [personNumber, setpersonNumber] = useState(count);
   const counSetter = (e) => {
     console.log("onChange", count)
@@ -46,17 +45,20 @@ export default function Addteam() {
         <form onSubmit={handleSubmit} className='col-md-6'>
           <h3 className='text-center'>Add Team</h3>
           <div className='form-group my-3'>
-            <input type="text" id='addTeamName' name="addTeamName" className="form-control" placeholder='Enter the team name' value={addTeam.addTeamName} />
+            <input type="text" id='addTeamName' name="addTeamName" className="form-control" placeholder='Enter the team name' value={addTeam.addTeamName}  onChange={handleInput} />
           </div>
           <div className="mb-3">
-            <input type="text" name="addTeamImageUrl" id='addTeamImageUrl' className='form-control' placeholder='Add Team Image Url' value={addTeam.addTeamImageUrl} />
+            <input type="text" name="addTeamImageUrl" id='addTeamImageUrl' className='form-control' placeholder='Add Team Image Url' value={addTeam.addTeamImageUrl}  onChange={handleInput} />
           </div>
           <div className='form-group my-3' >
             <input type="number" name='addNoOfPlayers' className='form-control' id='addNoOfPlayers' placeholder='Add No Of Players' onChange={counSetter} value={count} />
           </div>
           <div className='form-group my-3' >
-            <input type="location" name="location" id='addTeamLocation' className='form-control' placeholder='Add Team Location' value={addTeam.location} />
+            <input type="location" name="location" id='addTeamLocation' className='form-control' placeholder='Add Team Location' value={addTeam.location}  onChange={handleInput} />
           </div>
+          {/* <div className='form-group my-3 text-center' >
+            <button className='btn btn-primary' id='addteam' type='submit'>Add Team</button>
+          </div> */}
         </form>
         <form onSubmit={handleSubmit} className='col-md-6'>
           <h3>Sport Person {personNumber}</h3>
@@ -75,7 +77,7 @@ export default function Addteam() {
 
 
           <div className='form-group my-3 text-center' >
-            <button className='btn btn-primary' id='addteam' type='submit' onClick={increaseCount}><FaPlusCircle />  Add Player</button>
+            <button className='btn btn-primary' id='addPlayers' type='submit' onClick={increaseCount}><FaPlusCircle />  Add Player</button>
           </div>
 
         </form>

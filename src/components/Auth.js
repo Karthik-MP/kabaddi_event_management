@@ -52,7 +52,7 @@ export default function Auth() {
                     <button className="btn btn-primary my-2 mx-2" onClick={handleReset}>Reset</button>
                 </div>
                 <div className="my-3 mb-2 text-center">
-                    <Link className='nav-link' id='signinLink' to='/'>New User/admin? Sign Up</Link>
+                    <Link className='nav-link' id='signinLink' to='/user/signup'>New User/admin? Sign Up</Link>
                 </div>
             </form>
         </div>:<Navigate to='/user/homepage'/>

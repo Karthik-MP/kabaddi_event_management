@@ -79,7 +79,7 @@ export default function ViewBooking() {
                                 <td>{element.totalPrice}</td>
                                {/* <td><Link id='editBooking' to={`user/editEvent/${element.id}`}  style={{color:'black'}}><FaEdit/></Link></td> */}
                                <td><Link id='editBooking' to={`/user/editEvent/${element.id}`}  style={{color:'black'}}><FaEdit/></Link></td>
-                                <td><Link id='deleteBooking' to={`user/deleteEvent/${element.id}`} style={{color:'black'}}><FaTrash/></Link></td>
+                                <td><Link id='deleteBooking' to={`/user/deleteEvent/${element.id}`} style={{color:'black'}}><FaTrash/></Link></td>
                             </tr>
                         </>
                     })}

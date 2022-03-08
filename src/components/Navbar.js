@@ -46,7 +46,7 @@ export default function Navbar() {
                     <Link className="nav-link active" aria-current="page" to="/admin/addVenue" id='adminVenues'>Venue</Link>
                   </li>
                   <li className="nav-item">
-                    <Link className="nav-link active" aria-current="page" to="/admin/addTeam" id='adminTeams'>Teams</Link>
+                    <Link className="nav-link active" aria-current="page" to="/admin/getTeam" id='adminTeams'>Teams</Link>
                   </li>
                   <li className="nav-item">
                     <Link className="nav-link active" aria-current="page" to="/admin/addReferee" id='adminReferee'>Referee</Link>

@@ -16,6 +16,7 @@ import EditEvent from "./components/user/EditEvent";
 import Addvenue from "./components/admin/Addvenue";
 import Addteam from "./components/admin/Addteam";
 import Addreferee from "./components/admin/Addreferee";
+import Getteam from "./components/admin/Getteam";
 
 
 
@@ -23,6 +24,7 @@ import Addreferee from "./components/admin/Addreferee";
 function App() {
   return (
     <>
+    
     <Router>
     <Navbar/>
           <Routes>
@@ -35,8 +37,9 @@ function App() {
             <Route exact path='/user/editEvent/:id' element={<EditEvent/>}/>
             
             <Route exact path='/admin/addVenue/' element={<Addvenue/>}/>
+            <Route exact path='/admin/getTeam/' element={<Getteam/>}/>
             <Route exact path='/admin/addTeam/' element={<Addteam/>}/>
-            <Route exact path='/admin/addReferee' element={<Addreferee/>}/>
+            <Route exact path='/admin/addReferee/' element={<Addreferee/>}/>
           
             
             <Route exact path='/' element={<PrivateRoute/>}>
