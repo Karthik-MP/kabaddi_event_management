@@ -1,70 +1,154 @@
-# Getting Started with Create React App
+# Kabaddi Event Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is a **Kabaddi Event Management Application** where users can book events and view their bookings, and admins can manage referees, teams, and venues. The frontend is built using **React**, and the backend is developed with **Spring Boot**.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Frontend (React)](#frontend-react)
+   - [Admin Features](#admin-features)
+   - [User Features](#user-features)
+   - [Axios API Calls](#axios-api-calls)
+2. [Backend (Spring Boot)](#backend-spring-boot)
+   - [Spring Security](#spring-security)
+   - [REST APIs](#rest-apis)
+3. [Running the Application](#running-the-application)
+4. [Technologies Used](#technologies-used)
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Frontend (React)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The frontend of the Kabaddi Event Management App is built using React. The following features are available:
 
-### `npm test`
+### Admin Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Add Referee**: Form to add a new referee for the event.
+- **Edit Referee**: Update details of an existing referee.
+- **Add Venue**: Form to add a new venue for the event.
+- **Edit Venue**: Update details of an existing venue.
+- **Add Team**: Form to add a new team to the event.
+- **Edit Team**: Update details of an existing team.
 
-### `npm run build`
+### User Features
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Booking Events**: Users can book tickets for an event.
+- **View Bookings**: Users can view their booking history.
+- **Edit Bookings**: Users can modify their event bookings if needed.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Axios API Calls
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The app uses **Axios** for making HTTP requests to the backend.
 
-### `npm run eject`
+- Add Referee: `POST /api/referees`
+- Edit Referee: `PUT /api/referees/{id}`
+- Add Venue: `POST /api/venues`
+- Edit Venue: `PUT /api/venues/{id}`
+- Booking Event: `POST /api/bookings`
+- View Booking: `GET /api/bookings/{userId}`
+- Edit Booking: `PUT /api/bookings/{bookingId}`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Backend (Spring Boot)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The backend is developed using **Spring Boot**, providing REST APIs for event management.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Spring Security
 
-## Learn More
+Spring Security is used for user authentication and authorization. The app has two roles:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Admin**: Full access to manage referees, teams, and venues.
+- **User**: Can book events and view their bookings.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+The authentication is based on **JWT (JSON Web Tokens)**.
 
-### Code Splitting
+### REST APIs
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **POST /api/referees**: Add a new referee.
+- **PUT /api/referees/{id}**: Edit referee details.
+- **POST /api/venues**: Add a new venue.
+- **PUT /api/venues/{id}**: Edit venue details.
+- **POST /api/bookings**: Book an event.
+- **GET /api/bookings/{userId}**: View user bookings.
+- **PUT /api/bookings/{bookingId}**: Edit an existing booking.
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Running the Application
 
-### Making a Progressive Web App
+### Frontend (React)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Clone the repository:  
+   `git clone https://github.com/your-username/kabaddi-event-management-app.git`
+   
+2. Navigate to the frontend directory:  
+   `cd frontend`
+   
+3. Install dependencies:  
+   `npm install`
 
-### Advanced Configuration
+4. Start the React app:  
+   `npm start`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+5. The frontend will be available at:  
+   `http://localhost:3000`
 
-### Deployment
+### Backend (Spring Boot)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+1. Clone the repository:  
+   `git clone https://github.com/your-username/kabaddi-event-management-app.git`
+   
+2. Navigate to the backend directory:  
+   `cd backend`
+   
+3. Install dependencies:  
+   `mvn install`
 
-### `npm run build` fails to minify
+4. Start the Spring Boot application:  
+   `mvn spring-boot:run`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+5. The backend will be available at:  
+   `http://localhost:8080`
+
+---
+
+## Technologies Used
+
+- **Frontend**:  
+  - React
+  - Axios
+  - React Router
+  - State Management (React Context API / Redux)
+
+- **Backend**:  
+  - Spring Boot
+  - Spring Security (JWT Authentication)
+  - Spring Data JPA (Database Integration)
+  - H2 / MySQL Database
+
+- **Other Tools**:  
+  - Maven for dependency management
+  - Postman for API testing
+
+---
+
+## Contributing
+
+Feel free to fork the repository and submit pull requests. To contribute, follow these steps:
+
+1. Fork the repository
+2. Clone your forked repository to your local machine
+3. Create a new branch: `git checkout -b feature-name`
+4. Make your changes and commit: `git commit -m 'Add feature'`
+5. Push to your fork: `git push origin feature-name`
+6. Create a pull request on GitHub
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Contact
+For further inquiries, please contact the project maintainer at:
+- Website: [karthikmp.com](https://karthikmp.com)
