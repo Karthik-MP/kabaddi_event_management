@@ -79,27 +79,24 @@ The authentication is based on **JWT (JSON Web Tokens)**.
 ### Frontend (React)
 
 1. Clone the repository:  
-   `git clone https://github.com/your-username/kabaddi-event-management-app.git`
+   `git clone https://github.com/Karthik-MP/kabaddi_event_management`
    
-2. Navigate to the frontend directory:  
-   `cd frontend`
-   
-3. Install dependencies:  
+2. Install dependencies:  
    `npm install`
 
-4. Start the React app:  
+3. Start the React app:  
    `npm start`
 
-5. The frontend will be available at:  
+4. The frontend will be available at:  
    `http://localhost:3000`
 
 ### Backend (Spring Boot)
 
 1. Clone the repository:  
-   `git clone https://github.com/your-username/kabaddi-event-management-app.git`
+   `git clone https://github.com/Karthik-MP/kabaddi_event_management`
    
 2. Navigate to the backend directory:  
-   `cd backend`
+   `cd maven`
    
 3. Install dependencies:  
    `mvn install`
